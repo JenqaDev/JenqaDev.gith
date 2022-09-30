@@ -3,6 +3,7 @@ import time
 import keyboard
 from playsound import playsound
 
+current_dir = os.getcwd()
 isOpen = True
 started = False
 mtime = os.path.getmtime("index.html")
@@ -23,7 +24,7 @@ while started:
     if(mtime != os.path.getmtime("index.html")):
         os.startfile("update.bat")
         print('Updating...')
-        playsound('beep.wav')
+        playsound(current_dir + '\beep.wav')
         mtime = os.path.getmtime("index.html")
     if keyboard.is_pressed('ctrl+alt+q'):
         print('Done Editing')

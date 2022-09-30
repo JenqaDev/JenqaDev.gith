@@ -15,7 +15,6 @@ def openLiveEditor():
 def closeLiveEditor():
     global started
     started = True
-    os.startfile("index.html")
 
 openLiveEditor()
 
@@ -23,6 +22,7 @@ while started:
     if(mtime != os.path.getmtime("index.html")):
         os.startfile("update.bat")
         print('Updating...')
+        mtime = os.path.getmtime("index.html")
     if keyboard.is_pressed('ctrl+alt+q'):
         print('Done Editing')
         break

@@ -1,35 +1,31 @@
-document.body.addEventListener('contextmenu', e => e.preventDefault() & e.stopPropagation());
-document.body.addEventListener('mousedown', onMouseDown);
-document.body.addEventListener('touchstart', e => onMouseDown(e.touches[0]));
-document.body.addEventListener('mouseup', onMouseUp);
-document.body.addEventListener('touchend', e => onMouseUp(e.touches[0]));
-document.body.addEventListener('mousemove', onMouseMove);
-document.body.addEventListener('touchmove', e => onMouseMove(e.touches[0]));
-let showing, anchorX, anchorY, min = 100;
-const wheel = document.querySelector('.wheel');
-function onMouseDown({ clientX: x, clientY: y }) {
-  showing = true;
-  anchorX = x;
-  anchorY = y;
-  wheel.style.setProperty('--x', `${x}px`);
-  wheel.style.setProperty('--y', `${y}px`);
-  wheel.classList.add('on');
-}
-function onMouseUp() {
-  showing = false;
-  wheel.setAttribute('data-chosen', 0);
-  wheel.classList.remove('on');
-}
-function onMouseMove({ clientX: x, clientY: y }) {
-  if (!showing) return;
-  let dx = x - anchorX;
-  let dy = y - anchorY;
-  let mag = Math.sqrt(dx * dx + dy * dy);
-  let index = 0;
-  if (mag >= min) {
-    let deg = Math.atan2(dy, dx) + 0.625 * Math.PI;
-    while (deg < 0) deg += Math.PI * 2;
-    index = Math.floor(deg / Math.PI * 4) + 1;
+// Get the button:
+let topb = document.getElementById("top");
+let menub = document.getElementById("menu");
+let ext = document.getElementById("extra");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    topb.style.display = "block";
+	menub.style.display = "block";
+  } else {
+    topb.style.display = "none";
+	menub.style.display = "none";
   }
-  wheel.setAttribute('data-chosen', index);
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function show() {
+	ext.style.visibility = "visible";
+}
+
+function hide() {
+	ext.style.visibility = "hidden";
 }

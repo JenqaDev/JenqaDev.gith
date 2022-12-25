@@ -83,23 +83,41 @@
 				
 				<div class="grid-container">
 					<a href="tipos-de-maus-tratos.html" rel="noopener noreferrer"><div class="grid-item">Tipos de Maus Tratos</div></a>
-					<a href="fatores.html" rel="noopener noreferrer"><div class="grid-item">Fatores de Risco</div></a>
+					<a onmouseenter="show()" onmouseleave="hide()" href="fatores.html" rel="noopener noreferrer"><div class="grid-item">Fatores de Risco</div></a>
 					<a href="consequencias.html" rel="noopener noreferrer"><div class="grid-item">Consequências</div></a>
 					<a href="ajuda.html" rel="noopener noreferrer"><div class="grid-item">Porquê pedir ajuda?</div></a>
 					<a href="prevencao.html" rel="noopener noreferrer"><div class="grid-item">Prevenção</div></a>
 				</div>
+				<div class="grid-container">
+					<div></div>
+					<a onmouseenter="show()" onmouseleave="hide()" style="visibility: hidden; z-index: 10;" id="extra" href="sinais-e-sintomas.html" rel="noopener noreferrer" class="extra"><div>Sinais e Sintomas</div></a>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</div>
 		</div>
+		
+		<button onclick="topFunction()" id="top" title="Back to top"><img style="width:100%; height:100%;" src="images/top.png"></button>
 		
 		<h1 style="width: 99.5%; background-color:#2a3042;" class="fade-in">
 		<big>Tipos de Maus Tratos</big>
 		</h1>
 		
+		<div style="margin-left: -10;margin-top: 75px; height: 650px; opacity: 0.3;" class="side-img">
+		<img style="width: 100%; height: 100%;" src="images/left.png">
+		</div>
+		
+		<div style="right:0; margin-top: 675px; height: 650px; opacity: 0.3;" class="side-img">
+		<img style="width: 100%; height: 100%;" src="images/right.png">
+		</div>
+		
 		<br>
 		
-		<div style="height: 27%" class="topico fade-in">
-			<div onclick="myFunction('sli', 'gone')" id="sli" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:85%; text-align: justify; align-items: center;" class="topico slider">
-				<p style="font-size: 50px;" id="gone"><b>Negligência</b></p>
+		<div style="height: 250px" class="topico fade-in">
+			<div onclick="myFunction('sli', 'gone')" id="sli" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:230px; text-align: justify; align-items: center;" class="topico slider">
+				<img style="width: 180px; border-radius: 10px;" src="images/negli.jpg">
+				<p style="font-size: 50px; margin-left: 10px" id="gone"><b>Negligência</b></p>
 			</div>
 			<div style="font-size: 19px; position: absolute; left: 18%; right: 4%;">
 				<p>A negligência é caraterizada pela incapacidade de proporcionar, especialmente, a crianças, jovem e idosos a satisfação de necessidades básicas de higiene, alimentação, afeto, educação e saúde, indispensáveis para o crescimento e desenvolvimento adequados.</p>
@@ -109,9 +127,11 @@
 		
 		<br>
 		
-		<div style="height: 24%" class="topico fade-in">
-			<div onclick="myFunction2('sli2', 'gone2')" id="sli2" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:77%; text-align: justify; align-items: center;" class="topico slider">
-				<p style="font-size: 50px; margin-left: auto" id="gone2"><b>Físicos</b></p>
+		<div style="height: 130px" class="topico fade-in">
+			<div onclick="myFunction2('sli2', 'gone2')" id="sli2" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:110px; text-align: justify; align-items: center;" class="topico slider">
+
+				<p style="font-size: 50px; margin-right: 10px; margin-left: auto" id="gone2"><b>Físicos</b></p>
+				<img style="width: 180px; border-radius: 10px;" src="images/fisi.jpg">
 			</div>
 			<div style="font-size: 19px; position: absolute; right: 18%; left: 3%;">
 				<p>Os maus tratos físicos resultam de qualquer ação não acidental, isolada ou repetida, que provoque (ou possa provocar futuramente) dano físico, praticada pelos pais, cuidadores ou outros com responsabilidade face à criança ou jovem. Este tipo de maus tratos engloba um conjunto diversificado de situações traumáticas, que serão apresentadas seguidamente.</p>
@@ -120,9 +140,10 @@
 		
 		<br>
 		
-		<div style="height: 24%" class="topico fade-in">
-			<div onclick="myFunction3('sli3', 'gone3')" id="sli3" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:80%; text-align: justify; align-items: center;" class="topico slider">
-				<p style="font-size: 50px;" id="gone3"><b>Psicológicos</b></p>
+		<div style="height: 180px" class="topico fade-in">
+			<div onclick="myFunction3('sli3', 'gone3')" id="sli3" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:160px; text-align: justify; align-items: center;" class="topico slider">
+				<img style="width: 180px; border-radius: 10px;" src="images/psycho.jpg">
+				<p style="font-size: 50px; margin-left: 10px;" id="gone3"><b>Psicológicos</b></p>
 			</div>
 			<div style="font-size: 19px; position: absolute; left: 18%; right: 4%;">
 				<p>É caracterizado pela privação de um ambiente de segurança e de bem-estar afetivo, indispensável ao crescimento, desenvolvimento e comportamento equilibrados da criança/jovem.</p>
@@ -132,9 +153,10 @@
 		
 		<br>
 		
-		<div style="height: 56%" class="topico fade-in">
-			<div onclick="myFunction4('sli4', 'gone4')" id="sli4" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:92%; text-align: justify; align-items: center;" class="topico slider">
-				<p style="font-size: 50px; margin-left: auto" id="gone4"><b>Abuso Sexual</b></p>
+		<div style="height: 410px" class="topico fade-in">
+			<div onclick="myFunction4('sli4', 'gone4')" id="sli4" style="cursor: pointer; z-index: 10; position: absolute; border-width : 0; display: flex; width:95%; height:390px; text-align: justify; align-items: center;" class="topico slider">
+				<p style="font-size: 50px; margin-right: 10px; margin-left: auto" id="gone4"><b>Abuso Sexual</b></p>
+				<img style="width: 180px; border-radius: 10px;" src="images/sexu.webp">
 			</div>
 			<div style="font-size: 19px; position: absolute; right: 18%; left: 3%;">
 				<p>Este ato corresponde ao envolvimento de uma criança ou adolescente em atividades cuja finalidade visa a satisfação sexual de um adulto ou outra pessoa mais velha.</p>
@@ -157,5 +179,7 @@
 				<p style="color: #edfcff; transform: translateY(-10px); text-align: center;"><a href="tipos-de-maus-tratos.html">Tipos de Maus Tratos</a> | <a href="fatores.html">Fatores de Risco</a> | <a href="consequencias.html">Consequências</a> | <a href="ajuda.html">Porquê pedir ajuda?</a> | <a href="prevencao.html">Prevenção</a></p>
 			</div>
 		</footer>
+		
+		<script src="makes.js"></script>
 	</body>
 </html>

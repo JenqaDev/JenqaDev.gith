@@ -105,6 +105,7 @@ h1 {
 	margin: auto;
 	padding: 12px;
     font-size: 23px;
+	border-radius: 15px;
 	font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
 }
 
@@ -257,6 +258,7 @@ a:active {
 	align-items: center;
 	justify-content: center;
 	margin: auto;
+	border-radius: 15px;
 	padding: 12px;
     font-size: 23px;
 	font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif;
@@ -268,6 +270,10 @@ a:active {
 
 .ctopico {
     transition: transform 100ms ease-in-out;
+}
+
+.side-img {
+	position: absolute;
 }
 
 @keyframes fadeInOpacity {

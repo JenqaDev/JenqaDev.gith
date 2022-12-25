@@ -14,13 +14,22 @@
 				
 				<div class="grid-container">
 					<a href="tipos-de-maus-tratos.html" rel="noopener noreferrer"><div class="grid-item">Tipos de Maus Tratos</div></a>
-					<a href="fatores.html" rel="noopener noreferrer"><div class="grid-item">Fatores de Risco</div></a>
+					<a onmouseenter="show()" onmouseleave="hide()" href="fatores.html" rel="noopener noreferrer"><div class="grid-item">Fatores de Risco</div></a>
 					<a href="consequencias.html" rel="noopener noreferrer"><div class="grid-item">Consequências</div></a>
 					<a href="ajuda.html" rel="noopener noreferrer"><div class="grid-item">Porquê pedir ajuda?</div></a>
 					<a href="prevencao.html" rel="noopener noreferrer"><div class="grid-item">Prevenção</div></a>
 				</div>
+				<div class="grid-container">
+					<div></div>
+					<a onmouseenter="show()" onmouseleave="hide()" style="visibility: hidden; z-index: 10;" id="extra" href="sinais-e-sintomas.html" rel="noopener noreferrer" class="extra"><div>Sinais e Sintomas</div></a>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
 			</div>
 		</div>
+		
+		<button onclick="topFunction()" id="top" title="Back to top"><img style="width:100%; height:100%;" src="images/top.png"></button>
 		
 		<h1 style="width: 99.5%; background-color:#2a3042;" class="fade-in">
 		<big>Prevenção</big>
@@ -59,5 +68,7 @@
 				<p style="color: #edfcff; transform: translateY(-10px); text-align: center;"><a href="tipos-de-maus-tratos.html">Tipos de Maus Tratos</a> | <a href="fatores.html">Fatores de Risco</a> | <a href="consequencias.html">Consequências</a> | <a href="ajuda.html">Porquê pedir ajuda?</a> | <a href="prevencao.html">Prevenção</a></p>
 			</div>
 		</footer>
+		
+		<script src="makes.js"></script>
 	</body>
 </html>

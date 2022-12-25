@@ -1,6 +1,5 @@
 // Get the button:
 let topb = document.getElementById("top");
-let menub = document.getElementById("menu");
 let ext = document.getElementById("extra");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -9,10 +8,8 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     topb.style.display = "block";
-	menub.style.display = "block";
   } else {
     topb.style.display = "none";
-	menub.style.display = "none";
   }
 }
 
